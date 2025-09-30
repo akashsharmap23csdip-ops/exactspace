@@ -1,0 +1,19 @@
+Anomaly Analysis: Cluster 1 from 2020-06-27 22:05:00 to 2020-06-28 02:55:00
+Duration: 290.00 minutes
+
+Implicated Variables and Z-Scores:
+Cyclone_Material_Temp: 6.71, Cyclone_Inlet_Draft: 2.63
+
+Variable Changes:
+Cyclone_Material_Temp decreased moderately by 25.93% during the anomaly
+  Before mean: 904.90
+  During mean: 670.29
+  After mean: 637.53
+
+Cyclone_Inlet_Draft increased slightly by 0.21% during the anomaly
+  Before mean: -218.56
+  During mean: -219.02
+  After mean: -215.05
+
+Root Cause Hypothesis:
+A sudden decrease in Cyclone_Material_Temp coincided with a increase in Cyclone_Inlet_Draft, which suggests a potential thermal imbalance affecting pressure conditions, possibly due to upstream process changes or partial blockage.

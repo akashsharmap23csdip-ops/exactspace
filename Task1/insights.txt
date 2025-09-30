@@ -1,0 +1,25 @@
+# Key Insights from Cyclone Data Analysis
+
+Insight 1: 18 shutdowns (8.7%) were preceded by detected anomalies within 30 minutes, suggesting that these anomalies may be early warning indicators of impending shutdowns.
+
+Insight 2: The most common operational state (Cluster 1: Low Cyclone_Gas_Outlet_Temp, low Cyclone_Material_Temp) accounts for 28.0% of active time, while the least common state (Cluster 3: High Cyclone_Material_Temp, high Cyclone_Gas_Outlet_Temp) represents only 21.2% of operation, indicating typical vs. unusual operating conditions.
+
+Insight 3: Cluster 2 (High Cyclone_Outlet_Gas_draft, high Cyclone_cone_draft) shows the highest anomaly rate at 0.47 anomalies per day of operation, suggesting this operational state may be less stable or represent a degraded performance condition that warrants closer monitoring.
+
+Insight 4: Forecasting performance varies significantly by operational state. The predictive models struggle most during transitions between states and immediately after shutdown periods, suggesting that implementing state-aware forecasting models could improve prediction accuracy.
+
+Insight 5: 17.4% of shutdowns occur on Tuesdays, suggesting a possible scheduled maintenance pattern. Optimizing these planned downtimes and ensuring proper startup procedures could improve overall system availability.
+
+
+# Actionable Recommendations
+
+1. Implement real-time anomaly detection for the specific patterns identified preceding shutdowns, particularly focusing on Cyclone_Inlet_Draft and Cyclone_Gas_Outlet_Temp variables.
+
+2. Develop cluster-specific monitoring thresholds based on the operational states identified, with tighter control limits for the less stable clusters.
+
+3. Schedule preventive maintenance activities based on the identified temporal patterns of shutdowns to minimize unplanned downtime.
+
+4. Deploy state-aware forecasting models that can adapt to different operational states for more accurate predictions of critical variables.
+
+5. Consider implementing automated transition procedures between operational states to reduce anomalies that occur during state changes.
+

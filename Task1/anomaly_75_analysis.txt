@@ -1,0 +1,19 @@
+Anomaly Analysis: Cluster 1 from 2018-03-19 10:20:00 to 2018-03-19 13:35:00
+Duration: 195.00 minutes
+
+Implicated Variables and Z-Scores:
+Cyclone_Gas_Outlet_Temp: 5.91, Cyclone_Inlet_Gas_Temp: 4.18
+
+Variable Changes:
+Cyclone_Gas_Outlet_Temp increased slightly by 3.13% during the anomaly
+  Before mean: 501.85
+  During mean: 517.54
+  After mean: 719.39
+
+Cyclone_Inlet_Gas_Temp increased slightly by 3.93% during the anomaly
+  Before mean: 902.07
+  During mean: 937.50
+  After mean: 907.01
+
+Root Cause Hypothesis:
+A sudden increase in Cyclone_Gas_Outlet_Temp coincided with a increase in Cyclone_Inlet_Gas_Temp, which suggests a heat transfer anomaly affecting multiple zones of the cyclone, possibly due to material property changes or cooling system issues.

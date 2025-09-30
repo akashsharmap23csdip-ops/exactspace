@@ -1,0 +1,19 @@
+Anomaly Analysis: Cluster 1 from 2020-03-07 21:30:00 to 2020-03-08 07:40:00
+Duration: 610.00 minutes
+
+Implicated Variables and Z-Scores:
+Cyclone_Material_Temp: 6.60, Cyclone_Outlet_Gas_draft: 3.61
+
+Variable Changes:
+Cyclone_Material_Temp decreased slightly by 7.65% during the anomaly
+  Before mean: 699.32
+  During mean: 645.79
+  After mean: 847.49
+
+Cyclone_Outlet_Gas_draft decreased slightly by 0.94% during the anomaly
+  Before mean: -299.74
+  During mean: -296.92
+  After mean: -302.61
+
+Root Cause Hypothesis:
+A sudden decrease in Cyclone_Material_Temp coincided with a decrease in Cyclone_Outlet_Gas_draft, which suggests an operational anomaly that may require further investigation of upstream processes or control parameters.

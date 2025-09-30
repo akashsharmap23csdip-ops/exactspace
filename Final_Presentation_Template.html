@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Final Presentation Template</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        .slide {
+            background-color: white;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        .title {
+            text-align: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        .slide-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            color: #333;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .content {
+            font-size: 18px;
+        }
+        .bullet-points {
+            margin-left: 20px;
+        }
+        .bullet {
+            margin-bottom: 15px;
+        }
+        .columns {
+            display: flex;
+            gap: 30px;
+        }
+        .column {
+            flex: 1;
+        }
+        .image-placeholder {
+            background-color: #ddd;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .note {
+            font-style: italic;
+            color: #666;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Slide -->
+    <div class="slide">
+        <div class="title">ExactSpace Data Science Assessment</div>
+        <div class="content" style="text-align: center; font-size: 22px;">
+            <p>Machine Data Analysis &amp; RAG System Design</p>
+            <p style="margin-top: 60px;">FirstName LastName</p>
+            <p>September 30, 2025</p>
+        </div>
+    </div>
+
+    <!-- Slide 1: Data Preparation -->
+    <div class="slide">
+        <div class="slide-title">Data Preparation (Task 1)</div>
+        <div class="columns">
+            <div class="column">
+                <div class="content">
+                    <div class="bullet-points">
+                        <div class="bullet">• 370,000+ records over 3 years at 5-minute intervals</div>
+                        <div class="bullet">• Preprocessing steps:
+                            <ul>
+                                <li>Handled missing values with forward/backward fill</li>
+                                <li>Ensured strict 5-minute intervals</li>
+                                <li>Detected and treated outliers using IQR method</li>
+                            </ul>
+                        </div>
+                        <div class="bullet">• Shutdown detection methodology:
+                            <ul>
+                                <li>Threshold on Cyclone_Inlet_Draft (> -100)</li>
+                                <li>Identified [X] shutdown events totaling [Y] hours</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-placeholder">
+                    [Chart: One year of data with shutdowns highlighted]
+                </div>
+                <div class="image-placeholder">
+                    [Chart: Data quality improvements before/after]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2: Analysis Strategy -->
+    <div class="slide">
+        <div class="slide-title">Analysis Strategy (Task 1)</div>
+        <div class="columns">
+            <div class="column">
+                <div class="content">
+                    <div class="bullet-points">
+                        <div class="bullet">• Machine state segmentation:
+                            <ul>
+                                <li>KMeans clustering with [n] clusters</li>
+                                <li>States identified: Normal, High Load, Degraded...</li>
+                            </ul>
+                        </div>
+                        <div class="bullet">• Anomaly detection approach:
+                            <ul>
+                                <li>Context-specific Isolation Forest per cluster</li>
+                                <li>Detected [X] significant anomalies</li>
+                            </ul>
+                        </div>
+                        <div class="bullet">• Forecasting methodology:
+                            <ul>
+                                <li>Compared ARIMA, Prophet, and baseline models</li>
+                                <li>Best model: [X] with RMSE of [Y]</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-placeholder">
+                    [Visualization: Cluster PCA Plot]
+                </div>
+                <div class="image-placeholder">
+                    [Chart: Forecasting model comparison]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Key Insights -->
+    <div class="slide">
+        <div class="slide-title">Key Insights (Task 1)</div>
+        <div class="content">
+            <div class="bullet-points">
+                <div class="bullet">• <strong>Shutdown patterns:</strong> [X]% of shutdowns occur on [Day], suggesting scheduled maintenance</div>
+                <div class="bullet">• <strong>Operational states:</strong> Identified [n] distinct operational states, with State [X] representing [Y]% of operation time</div>
+                <div class="bullet">• <strong>Anomaly-shutdown correlation:</strong> [Z]% of shutdowns were preceded by detected anomalies within 30 minutes</div>
+                <div class="bullet">• <strong>Cluster stability:</strong> Cluster [X] shows highest anomaly rate, suggesting potential degraded performance</div>
+                <div class="bullet">• <strong>Forecasting challenges:</strong> Prediction accuracy decreases during state transitions and post-shutdown periods</div>
+            </div>
+            <div class="note">
+                Actionable recommendation: Implement real-time monitoring focused on early warning indicators identified in the anomaly analysis
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: System Architecture -->
+    <div class="slide">
+        <div class="slide-title">RAG System Architecture (Task 2)</div>
+        <div class="columns">
+            <div class="column">
+                <div class="content">
+                    <div class="bullet-points">
+                        <div class="bullet">• Document processing pipeline:
+                            <ul>
+                                <li>Extract text from PDFs with metadata</li>
+                                <li>Semantic chunking (500-700 tokens, 20% overlap)</li>
+                                <li>Embedding generation (all-MiniLM-L6-v2)</li>
+                            </ul>
+                        </div>
+                        <div class="bullet">• Retrieval approach:
+                            <ul>
+                                <li>Hybrid vector + BM25 search</li>
+                                <li>Reranking for relevance</li>
+                            </ul>
+                        </div>
+                        <div class="bullet">• LLM integration:
+                            <ul>
+                                <li>Contextual prompting</li>
+                                <li>Citation enforcement</li>
+                                <li>Response verification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column">
+                <div class="image-placeholder" style="height: 400px;">
+                    [RAG System Architecture Diagram]
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: RAG Challenges & Solutions -->
+    <div class="slide">
+        <div class="slide-title">RAG Challenges & Guardrails (Task 2)</div>
+        <div class="content">
+            <div class="columns">
+                <div class="column">
+                    <div class="bullet-points">
+                        <div class="bullet"><strong>Challenge: Hallucinations</strong>
+                            <ul>
+                                <li>Solution: Enforced citations with source verification</li>
+                                <li>Answer validation against source material</li>
+                            </ul>
+                        </div>
+                        <div class="bullet"><strong>Challenge: No relevant information</strong>
+                            <ul>
+                                <li>Solution: Structured fallback messages</li>
+                                <li>Suggest related queries based on available context</li>
+                            </ul>
+                        </div>
+                        <div class="bullet"><strong>Challenge: Scalability</strong>
+                            <ul>
+                                <li>Solution: Hierarchical indexing</li>
+                                <li>Distributed vector storage</li>
+                                <li>Query caching</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="image-placeholder">
+                        [Diagram: RAG Guardrails Flow]
+                    </div>
+                    <div class="bullet-points">
+                        <div class="bullet"><strong>Evaluation metrics:</strong>
+                            <ul>
+                                <li>Precision@k: [X]%</li>
+                                <li>Recall@k: [Y]%</li>
+                                <li>Response faithfulness: [Z]%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="note">
+                The prototype demonstrates reliable information retrieval with accurate source citations while gracefully handling edge cases
+            </div>
+        </div>
+    </div>
+
+    <div class="slide">
+        <div class="slide-title">Summary & Next Steps</div>
+        <div class="content">
+            <div class="bullet-points">
+                <div class="bullet"><strong>Task 1 Achievements:</strong>
+                    <ul>
+                        <li>Identified distinct operational states and their characteristics</li>
+                        <li>Detected anomaly patterns that correlate with shutdowns</li>
+                        <li>Created forecasting models that adapt to operational context</li>
+                    </ul>
+                </div>
+                <div class="bullet"><strong>Task 2 Achievements:</strong>
+                    <ul>
+                        <li>Designed scalable RAG architecture with robust guardrails</li>
+                        <li>Implemented working prototype with open-source components</li>
+                        <li>Demonstrated reliable retrieval and faithful answering</li>
+                    </ul>
+                </div>
+                <div class="bullet"><strong>Next steps:</strong>
+                    <ul>
+                        <li>Deploy real-time monitoring based on identified anomaly patterns</li>
+                        <li>Extend RAG system with improved semantic chunking and hybrid retrieval</li>
+                        <li>Integrate both systems for comprehensive operational intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="note" style="text-align: center; margin-top: 50px; page-break-before: always;">
+        Note: This is an HTML template for the presentation. Please convert to PowerPoint for the final submission.
+    </div>
+</body>
+</html>

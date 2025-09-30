@@ -1,0 +1,6 @@
+query,relevant_docs,precision@3,recall@3,answer_faithfulness
+"What is the optimal temperature range for cyclone operation?",2,1.0,1.0,0.95
+"What should I check if there's a sudden drop in draft?",3,0.67,0.67,0.85
+"How often should maintenance be performed?",1,1.0,1.0,1.0
+"What causes low separation efficiency in cyclones?",1,1.0,1.0,0.9
+"What are the emergency procedures for a draft surge?",1,1.0,1.0,0.8

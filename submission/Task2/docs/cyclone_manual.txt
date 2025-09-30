@@ -1,0 +1,42 @@
+# Cyclone Operation Manual
+
+## Introduction
+
+A cyclone is a device that uses centrifugal force to separate particles from a gas stream. It consists of an inlet, a cylindrical section, a conical section, and an outlet.
+
+## Operating Parameters
+
+### Temperature
+
+The cyclone inlet gas temperature should be maintained between 300°C and 450°C for optimal operation. If the temperature drops below 300°C, incomplete combustion may occur, leading to increased emissions. If the temperature exceeds 450°C, thermal damage to the cyclone lining may occur.
+
+### Pressure
+
+The cyclone inlet draft should be maintained between -150 mmWG and -130 mmWG. A sudden drop in draft may indicate a blockage or a leak in the system. Conversely, a sudden increase in draft (becoming less negative) might indicate a draft control issue.
+
+### Material Flow
+
+The material temperature should be monitored closely. A high material temperature (>380°C) might indicate excessive heat transfer from the gas, which could affect downstream equipment.
+
+## Troubleshooting
+
+### Scenario 1: Sudden Draft Drop
+
+If there is a sudden drop in cyclone inlet draft (becoming more negative), check for:
+1. Partial blockage in downstream equipment
+2. Improper fan operation
+3. Changes in upstream process conditions
+
+### Scenario 2: High Outlet Temperature
+
+If the cyclone gas outlet temperature is abnormally high:
+1. Check for reduced material flow
+2. Verify the inlet gas temperature
+3. Inspect refractory lining for damage
+
+## Maintenance
+
+Regular maintenance should be performed weekly to ensure optimal operation. This includes:
+1. Inspection of the cyclone body for wear
+2. Checking the draft gauge for proper functioning
+3. Calibration of temperature sensors

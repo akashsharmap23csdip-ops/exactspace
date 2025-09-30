@@ -1,0 +1,96 @@
+# Cyclone Troubleshooting Guide
+
+## Common Issues and Solutions
+
+### 1. Low Separation Efficiency
+
+**Symptoms:**
+- Increased dust emissions
+- Reduced collection rate
+- Visible particles in gas outlet
+
+**Potential Causes:**
+- Inlet velocity too low
+- Cyclone diameter too large for particle size
+- Wear in cyclone body
+- Leakage at seals
+
+**Solutions:**
+- Verify fan operation and inlet velocity (should be 15-25 m/s)
+- Check for worn areas in the cyclone body and repair as needed
+- Inspect and replace damaged seals
+- Consider installing a smaller diameter cyclone for fine particles
+
+### 2. Pressure Drop Issues
+
+**Symptoms:**
+- Abnormal draft readings
+- Reduced throughput
+- Inconsistent separation
+
+**Potential Causes:**
+- Material buildup in cone section
+- Partial blockage in outlet
+- Improper inlet configuration
+- Damaged or worn components
+
+**Solutions:**
+- Inspect and clean cone section
+- Check outlet for blockages
+- Verify inlet dimensions and alignment
+- Replace worn components
+
+### 3. Temperature-Related Problems
+
+**Symptoms:**
+- Fluctuating temperature readings
+- Material sticking to walls
+- Condensation in outlet
+
+**Potential Causes:**
+- Operating below dew point
+- Improper insulation
+- Faulty temperature sensors
+- Upstream process variations
+
+**Solutions:**
+- Maintain temperature above dew point (typically >150°C)
+- Verify insulation integrity
+- Calibrate or replace temperature sensors
+- Stabilize upstream process conditions
+
+## Emergency Procedures
+
+### Sudden Draft Surge
+
+If draft suddenly becomes less negative (>-100 mmWG):
+1. Check for breach in cyclone body
+2. Verify fan operation
+3. Inspect for material buildup causing flow restrictions
+4. Reduce inlet flow rate until issue is resolved
+
+### High Temperature Alarm
+
+If temperature exceeds 500°C:
+1. Reduce inlet flow immediately
+2. Check upstream combustion process
+3. Inspect refractory lining
+4. Verify cooling systems are operational
+
+## Preventive Maintenance
+
+### Daily Checks
+- Monitor pressure drop across cyclone
+- Record inlet and outlet temperatures
+- Inspect visible portions for dust buildup
+
+### Weekly Tasks
+- Calibrate pressure sensors
+- Check seals and flanges for leaks
+- Verify fan performance
+
+### Monthly Procedures
+- Inspect cyclone internals for wear
+- Clean cone section
+- Check structural supports
+- Analyze collection efficiency

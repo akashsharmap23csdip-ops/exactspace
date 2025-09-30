@@ -1,0 +1,19 @@
+Anomaly Analysis: Cluster 1 from 2018-05-20 13:45:00 to 2018-05-20 20:20:00
+Duration: 395.00 minutes
+
+Implicated Variables and Z-Scores:
+Cyclone_Gas_Outlet_Temp: 6.12, Cyclone_Inlet_Draft: 2.72
+
+Variable Changes:
+Cyclone_Gas_Outlet_Temp decreased moderately by 31.22% during the anomaly
+  Before mean: 745.60
+  During mean: 512.85
+  After mean: 817.64
+
+Cyclone_Inlet_Draft increased slightly by 2.91% during the anomaly
+  Before mean: -213.11
+  During mean: -219.31
+  After mean: -223.47
+
+Root Cause Hypothesis:
+A sudden decrease in Cyclone_Gas_Outlet_Temp coincided with a increase in Cyclone_Inlet_Draft, which suggests a potential thermal imbalance affecting pressure conditions, possibly due to upstream process changes or partial blockage.

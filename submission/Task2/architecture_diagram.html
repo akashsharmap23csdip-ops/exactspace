@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RAG System Architecture Diagram</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+        .diagram {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .box {
+            border: 2px solid #333;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .flow {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        .arrow {
+            align-self: center;
+            font-size: 20px;
+        }
+        .component {
+            width: 200px;
+        }
+        .note {
+            font-size: 12px;
+            color: #666;
+            margin-top: 5px;
+        }
+        .system {
+            border: 1px dashed #999;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .system-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="diagram">
+        <div class="title">RAG System Architecture</div>
+        
+        <!-- Document Ingestion Pipeline -->
+        <div class="system">
+            <div class="system-title">1. Document Ingestion Pipeline</div>
+            <div class="flow">
+                <div class="box component">
+                    Document Sources
+                    <div class="note">PDFs, SOPs, Manuals</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Document Parser
+                    <div class="note">Extract text & metadata</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Text Chunking
+                    <div class="note">Semantic chunks with 20% overlap</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Embedding Generation
+                    <div class="note">sentence-transformers/all-MiniLM-L6-v2</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Vector Database & Storage -->
+        <div class="system">
+            <div class="system-title">2. Vector Database & Storage</div>
+            <div class="flow">
+                <div class="box component">
+                    Vector DB
+                    <div class="note">Chroma/FAISS</div>
+                </div>
+                <div class="arrow">↔</div>
+                <div class="box component">
+                    Metadata Store
+                    <div class="note">Document source, page #, section</div>
+                </div>
+                <div class="arrow">↔</div>
+                <div class="box component">
+                    Original Document Storage
+                    <div class="note">For citation & verification</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Query Processing Flow -->
+        <div class="system">
+            <div class="system-title">3. Query Processing Flow</div>
+            <div class="flow">
+                <div class="box component">
+                    User Query
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Query Understanding
+                    <div class="note">Classification & preprocessing</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Hybrid Retrieval
+                    <div class="note">Vector + BM25</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Reranking
+                    <div class="note">Relevance scoring</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- LLM Integration -->
+        <div class="system">
+            <div class="system-title">4. LLM Integration</div>
+            <div class="flow">
+                <div class="box component">
+                    Context Assembly
+                    <div class="note">Retrieved docs + prompt</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    LLM Processing
+                    <div class="note">Open-source model (flan-t5, Llama)</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Response Verification
+                    <div class="note">Fact checking against sources</div>
+                </div>
+                <div class="arrow">→</div>
+                <div class="box component">
+                    Cited Response
+                    <div class="note">With source references</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Monitoring & Feedback -->
+        <div class="system">
+            <div class="system-title">5. Monitoring & Feedback</div>
+            <div class="flow">
+                <div class="box component">
+                    User Feedback Loop
+                </div>
+                <div class="arrow">↓</div>
+                <div class="box component">
+                    Metrics Collection
+                    <div class="note">Precision, recall, faithfulness</div>
+                </div>
+                <div class="arrow">↓</div>
+                <div class="box component">
+                    System Optimization
+                    <div class="note">Retrieval tuning, prompt engineering</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div>
+        <p><strong>Note:</strong> This is an HTML representation of the architecture diagram. Please convert this to PowerPoint format for the final submission.</p>
+    </div>
+</body>
+</html>
